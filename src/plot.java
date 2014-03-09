@@ -9,44 +9,76 @@ public class plot {
 		System.out.print("Enter x :");
 		int x = input.nextInt();
 		
-		System.out.println("f(x)= x^2 : "  + fx(x));
-		System.out.println("g(x)= sin(x) : "  + gx(x));
-		System.out.println("h(x)= cos(x) : "  + hx(x));
-		System.out.println("j(x)= tan(x) : "  + jx(x));
-		System.out.println("k(x)= cos(x) + 5sin(x) : "  + kx(x));
-		System.out.println("n(x)= 5cos(x) + sin(x) : "  + nx(x));
-		System.out.println("m(x)= log(x) + x^2 : "  + mx(x));
+		 B b = new B();
+		 C c = new C();
+		 D d = new D();
+		 E e = new E();
+		 F f = new F();
+		 G g = new G(); 
+ 		 H h = new H();
+		 
+		System.out.println("f(x)= x^2 : "  + b.fx(x));
+		System.out.println("g(x)= sin(x) : "  + c.fx(x));
+		System.out.println("h(x)= cos(x) : "  + d.fx(x));
+		System.out.println("j(x)= tan(x) : "  + e.fx(x));
+		System.out.println("k(x)= cos(x) + 5sin(x) : "  + f.fx(x));
+		System.out.println("n(x)= 5cos(x) + sin(x) : "  + g.fx(x));
+		System.out.println("m(x)= log(x) + x^2 : "  + h.fx(x));
 		
 	}
-		
-	public static double fx(int x){
+}	
+
+abstract class A{ 
+	abstract double fx(int x);
+}
+
+class B extends A{
+
+	public double fx(int x){
 		return x*x;
 	}
+}	
 	
-	public static double gx(int x){
+	
+class C extends A{
+	
+	public double fx(int x){
 		return Math.sin(x);
 		
 	}
+}	
+
 	
-	public static double hx(int x){
+class D extends A{
+	
+	public double fx(int x){
 		return Math.cos(x);
 	}
+}
 	
-	public static double jx(int x){
+class E extends A{
+
+	public double fx(int x){
 		return Math.tan(x);
 	}
+}	
 	
-	public static double kx(int x){
+class F extends A{
+	public double fx(int x){
 		return Math.cos(x) + 5*Math.sin(x);
 	}
-	
-	public static double nx(int x){
+}
+
+
+class G extends A{	
+	public double fx(int x){
 		return 5*Math.cos(x) + Math.sin(x);
 	}
+}
 	
-	public static double mx(int x){
+class H extends A{
+	public double fx(int x){
 		return Math.log(x) + x*x;
 	}
+}	
 	
-	
-}
