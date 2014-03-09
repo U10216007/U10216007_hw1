@@ -9,14 +9,22 @@ public class plot {
 		System.out.print("Enter x :");
 		int x = input.nextInt();
 		
-		System.out.println(fx(x));
+		System.out.println("f(x)= x^2 : "  + fx(x));
+		System.out.println("g(x)= sin(x) : "  + gx(x));
+		
+		
 		
 	}
 		
 	public static double fx(int x){
-		return (x*x);
+		return x*x;
+	}
 	
-	}	
+	public static double gx(int x){
+		return Math.sin(x);
+		
+	}
+	
 	
 }
 	
