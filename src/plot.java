@@ -11,8 +11,8 @@ public class plot {
 		
 		System.out.println("f(x)= x^2 : "  + fx(x));
 		System.out.println("g(x)= sin(x) : "  + gx(x));
-		
-		
+		System.out.println("h(x)= cos(x) : "  + hx(x));
+		System.out.println("j(x)= tan(x) : "  + jx(x));
 		
 	}
 		
@@ -25,7 +25,12 @@ public class plot {
 		
 	}
 	
+	public static double hx(int x){
+		return Math.cos(x);
+	}
+	
+	public static double jx(int x){
+		return Math.tan(x);
+	}
 	
 }
-	
-
